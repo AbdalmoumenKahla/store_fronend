@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "price": 79.99,
+    "description": "Premium wireless headphones with noise cancellation, 30-hour battery life, and superior sound quality.",
+    "image": "https://via.placeholder.com/300x300?text=Wireless+Headphones"
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch",
+    "price": 199.99,
+    "description": "Advanced smartwatch with fitness tracking, heart rate monitor, and water resistance up to 50m.",
+    "image": "https://via.placeholder.com/300x300?text=Smart+Watch"
+  },
+  {
+    "id": 3,
+    "name": "Portable Charger",
+    "price": 29.99,
+    "description": "Fast charging portable battery with 20000mAh capacity, perfect for travel and daily use.",
+    "image": "https://via.placeholder.com/300x300?text=Portable+Charger"
+  },
+  {
+    "id": 4,
+    "name": "USB-C Cable",
+    "price": 9.99,
+    "description": "High-quality 2-meter USB-C cable with fast data transfer and charging capabilities.",
+    "image": "https://via.placeholder.com/300x300?text=USB-C+Cable"
+  },
+  {
+    "id": 5,
+    "name": "Phone Stand",
+    "price": 14.99,
+    "description": "Adjustable phone stand compatible with all smartphones, perfect for video calls and streaming.",
+    "image": "https://via.placeholder.com/300x300?text=Phone+Stand"
+  },
+  {
+    "id": 6,
+    "name": "Screen Protector",
+    "price": 12.99,
+    "description": "Tempered glass screen protector with 9H hardness, anti-glare and fingerprint resistant.",
+    "image": "https://via.placeholder.com/300x300?text=Screen+Protector"
+  },
+  {
+    "id": 7,
+    "name": "Bluetooth Speaker",
+    "price": 49.99,
+    "description": "Waterproof Bluetooth speaker with 360-degree sound and 12-hour battery life.",
+    "image": "https://via.placeholder.com/300x300?text=Bluetooth+Speaker"
+  },
+  {
+    "id": 8,
+    "name": "Phone Case",
+    "price": 19.99,
+    "description": "Durable phone case with shock absorption, scratch resistance, and elegant design.",
+    "image": "https://via.placeholder.com/300x300?text=Phone+Case"
+  }
+]

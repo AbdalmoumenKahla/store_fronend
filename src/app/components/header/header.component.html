@@ -1,0 +1,23 @@
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <a routerLink="/" class="brand">Store</a>
+    </div>
+
+    <nav class="nav">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link"
+      >
+        Products
+      </a>
+      <a routerLink="/cart" routerLinkActive="active" class="nav-link cart-link">
+        <span class="cart-icon">🛒</span>
+        Cart
+        <span *ngIf="cartCount > 0" class="badge">{{ cartCount }}</span>
+      </a>
+    </nav>
+  </div>
+</header>

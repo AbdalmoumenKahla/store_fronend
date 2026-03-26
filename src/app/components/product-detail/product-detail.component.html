@@ -1,0 +1,42 @@
+<div class="product-detail-container">
+  <div *ngIf="loading" class="loading">
+    <p>Loading product...</p>
+  </div>
+
+  <div *ngIf="error" class="error-message">
+    <p>{{ error }}</p>
+  </div>
+
+  <div *ngIf="product && !loading" class="product-detail">
+    <a [routerLink]="['/']" class="back-link">&larr; Back to Products</a>
+
+    <div class="product-content">
+      <div class="product-image-container">
+        <img [src]="product.image" [alt]="product.name" class="product-image" />
+      </div>
+
+      <div class="product-details">
+        <h1>{{ product.name }}</h1>
+
+        <div class="price-section">
+          <span class="price">${{ product.price }}</span>
+        </div>
+
+        <p class="description">{{ product.description }}</p>
+
+        <div class="quantity-section">
+          <label for="quantity">Quantity:</label>
+          <div class="quantity-control">
+            <button (click)="decrementQuantity()" class="qty-btn">-</button>
+            <input type="number" id="quantity" [(ngModel)]="quantity" min="1" class="qty-input" />
+            <button (click)="incrementQuantity()" class="qty-btn">+</button>
+          </div>
+        </div>
+
+        <button (click)="addToCart()" class="btn btn-primary btn-lg">Add to Cart</button>
+
+        <div *ngIf="addedToCart" class="success-message">✓ Added to cart successfully!</div>
+      </div>
+    </div>
+  </div>
+</div>
