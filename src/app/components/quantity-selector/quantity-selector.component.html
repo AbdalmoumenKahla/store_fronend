@@ -1,0 +1,13 @@
+<div class="quantity-selector">
+  <div class="quantity-group">
+    <label for="quantity">Quantity:</label>
+    <div class="quantity-control">
+      <button (click)="decrementQuantity()" class="btn-control">-</button>
+      <input type="number" [(ngModel)]="quantity" id="quantity" min="1" class="qty-input" />
+      <button (click)="incrementQuantity()" class="btn-control">+</button>
+    </div>
+  </div>
+  <button (click)="onAddToCart()" class="btn btn-primary btn-add-to-cart">
+    Add to Cart
+  </button>
+</div>

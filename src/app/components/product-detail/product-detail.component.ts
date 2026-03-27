@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProductService, CartService } from '../../services';
 import { Product } from '../../models';
+import { QuantitySelectorComponent } from '../quantity-selector/quantity-selector.component';
 
 @Component({
   selector: 'app-product-detail',
   standalone: true,
-  imports: [CommonModule, RouterLink, FormsModule],
+  imports: [CommonModule, RouterLink, FormsModule, QuantitySelectorComponent],
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css']
 })
@@ -46,9 +47,10 @@ export class ProductDetailComponent implements OnInit {
     }
   }
 
-  addToCart(): void {
-    if (this.product && this.quantity > 0) {
-      this.cartService.addToCart(this.product, this.quantity);
+  onAddToCart(quantity: number): void {
+    if (this.product) {
+      alert(`${this.product.name} has been added to the cart (Quantity: ${quantity}).`);
+      this.cartService.addToCart(this.product, quantity);
       this.addedToCart = true;
       setTimeout(() => {
         this.addedToCart = false;
@@ -56,13 +58,7 @@ export class ProductDetailComponent implements OnInit {
     }
   }
 
-  incrementQuantity(): void {
-    this.quantity++;
-  }
-
-  decrementQuantity(): void {
-    if (this.quantity > 1) {
-      this.quantity--;
-    }
+  onQuantityChange(newQuantity: number): void {
+    this.quantity = newQuantity;
   }
 }

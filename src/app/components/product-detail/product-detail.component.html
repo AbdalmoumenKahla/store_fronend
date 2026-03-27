@@ -24,16 +24,13 @@
 
         <p class="description">{{ product.description }}</p>
 
-        <div class="quantity-section">
-          <label for="quantity">Quantity:</label>
-          <div class="quantity-control">
-            <button (click)="decrementQuantity()" class="qty-btn">-</button>
-            <input type="number" id="quantity" [(ngModel)]="quantity" min="1" class="qty-input" />
-            <button (click)="incrementQuantity()" class="qty-btn">+</button>
-          </div>
-        </div>
-
-        <button (click)="addToCart()" class="btn btn-primary btn-lg">Add to Cart</button>
+        <app-quantity-selector
+          [quantity]="quantity"
+          [productName]="product.name"
+          (addToCart)="onAddToCart($event)"
+          (quantityChange)="onQuantityChange($event)"
+        >
+        </app-quantity-selector>
 
         <div *ngIf="addedToCart" class="success-message">✓ Added to cart successfully!</div>
       </div>

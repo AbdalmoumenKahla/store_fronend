@@ -1,0 +1,52 @@
+<div
+  style="
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+  "
+>
+  <div style="display: flex; align-items: center; gap: 15px">
+    <img
+      [src]="cartItem.product.image"
+      [alt]="cartItem.product.name"
+      style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px"
+    />
+    <span style="font-weight: 500">{{ cartItem.product.name }}</span>
+  </div>
+  <div>${{ cartItem.product.price }}</div>
+  <div>
+    <input
+      type="number"
+      [ngModel]="cartItem.quantity"
+      (ngModelChange)="onQuantityChange($event)"
+      min="1"
+      style="
+        width: 60px;
+        padding: 6px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        text-align: center;
+      "
+    />
+  </div>
+  <div>${{ (cartItem.product.price * cartItem.quantity).toFixed(2) }}</div>
+  <div>
+    <button
+      (click)="onRemove()"
+      style="
+        padding: 6px 10px;
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+      "
+    >
+      Remove
+    </button>
+  </div>
+</div>
